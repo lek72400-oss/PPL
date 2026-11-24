@@ -1,0 +1,1484 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2027 봄 워크숍 '함께 걷는 하루' | 온담컴퍼니</title>
+    <meta
+      name="description"
+      content="온담컴퍼니 전 직원이 1분 안에 행사 핵심 정보를 확인할 수 있는 2027 봄 워크숍 안내 페이지입니다."
+    />
+    <meta property="og:title" content="2027 봄 워크숍 '함께 걷는 하루' | 온담컴퍼니" />
+    <meta
+      property="og:description"
+      content="온담컴퍼니 전 직원이 1분 안에 행사 핵심 정보를 확인할 수 있는 2027 봄 워크숍 안내 페이지입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      :root {
+        --bg: #eaf6ee;
+        --bg-soft: #f5fbf7;
+        --bg-tint: #dff0e5;
+        --border: #c5e0ce;
+        --heading: #0f4c3f;
+        --body: #14261f;
+        --muted: #355449;
+        --accent: #ff8fb0;
+        --button: #ffcf33;
+        --button-hover: #f5be14;
+        --font-rounded: ui-rounded, "SF Pro Rounded", "NanumSquareRound", "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", sans-serif;
+        --font-body: "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 84px;
+        background-color: var(--bg);
+        color: var(--body);
+        font-family: var(--font-body);
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg);
+        color: var(--body);
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      ::selection {
+        background-color: rgba(255, 143, 176, 0.32);
+        color: var(--body);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+        cursor: pointer;
+        border: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      dl,
+      dt,
+      dd,
+      ul,
+      li {
+        margin: 0;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      @media (min-width: 640px) {
+        .container {
+          padding: 0 28px;
+        }
+      }
+
+      /* Focus ring */
+      :focus-visible {
+        outline: 3px solid var(--heading);
+        outline-offset: 3px;
+      }
+
+      /* Header */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background-color: rgba(234, 246, 238, 0.94);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .header-inner {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      @media (min-width: 1024px) {
+        .header-inner {
+          gap: 32px;
+        }
+      }
+
+      .brand-link {
+        font-family: var(--font-rounded);
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--heading);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .desktop-nav {
+        display: none;
+        align-items: center;
+        gap: 18px;
+      }
+
+      @media (min-width: 768px) {
+        .desktop-nav {
+          display: flex;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .desktop-nav {
+          gap: 26px;
+        }
+      }
+
+      .nav-link {
+        position: relative;
+        padding: 6px 2px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: color 150ms ease;
+      }
+
+      .nav-link:hover {
+        color: var(--heading);
+      }
+
+      .nav-link.is-active {
+        color: var(--heading);
+      }
+
+      .nav-link.is-active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 3px;
+        border-radius: 9999px;
+        background-color: var(--accent);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 10px 20px;
+        border-radius: 16px;
+        background-color: var(--button);
+        color: var(--body);
+        font-size: 1rem;
+        font-weight: 700;
+        white-space: nowrap;
+        flex-shrink: 0;
+        box-shadow: 0 2px 0 rgba(15, 76, 63, 0.14);
+        transition: background-color 150ms ease, transform 150ms ease;
+      }
+
+      .btn:hover {
+        background-color: var(--button-hover);
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      .btn-header {
+        display: none;
+        padding: 9px 18px;
+        font-size: 1rem;
+      }
+
+      @media (min-width: 640px) {
+        .btn-header {
+          display: inline-flex;
+        }
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background-color: var(--button);
+        color: var(--body);
+        box-shadow: 0 2px 0 rgba(15, 76, 63, 0.14);
+        transition: background-color 150ms ease;
+      }
+
+      .mobile-menu-btn:hover {
+        background-color: var(--button-hover);
+      }
+
+      @media (min-width: 768px) {
+        .mobile-menu-btn {
+          display: none;
+        }
+      }
+
+      .mobile-nav {
+        border-top: 1px solid var(--border);
+        background-color: var(--bg);
+        padding: 12px 20px 16px;
+      }
+
+      .mobile-nav[hidden] {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .mobile-nav {
+          display: none !important;
+        }
+      }
+
+      .mobile-nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 14px;
+        border-radius: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--body);
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .mobile-nav-link:hover,
+      .mobile-nav-link.is-active {
+        background-color: var(--bg-soft);
+        color: var(--heading);
+      }
+
+      .mobile-nav-link.is-active {
+        box-shadow: inset 0 0 0 2px var(--accent);
+      }
+
+      /* Main sections with generous spacing */
+      main {
+        flex: 1;
+      }
+
+      .section {
+        padding: 72px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      @media (min-width: 768px) {
+        .section {
+          padding: 104px 0;
+        }
+      }
+
+      /* Hero section */
+      .hero-section {
+        padding: 64px 0 56px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      @media (min-width: 768px) {
+        .hero-section {
+          padding: 96px 0 72px;
+        }
+      }
+
+      .hero-top {
+        max-width: 760px;
+      }
+
+      .hero-kicker {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--heading);
+        padding-bottom: 4px;
+        border-bottom: 3px solid var(--accent);
+      }
+
+      .hero-title {
+        margin-top: 22px;
+        font-family: var(--font-rounded);
+        font-size: clamp(2.25rem, 5vw, 3.75rem);
+        font-weight: 800;
+        line-height: 1.22;
+        letter-spacing: -0.025em;
+        color: var(--heading);
+        text-wrap: balance;
+      }
+
+      .hero-title-sub {
+        display: block;
+        margin-top: 6px;
+      }
+
+      .hero-intro {
+        margin-top: 24px;
+        max-width: 40rem;
+        font-size: 1.125rem;
+        line-height: 1.75;
+        color: var(--body);
+      }
+
+      .hero-meta-bar {
+        margin-top: 40px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      @media (min-width: 768px) {
+        .hero-meta-bar {
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+      }
+
+      .hero-meta-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      @media (min-width: 520px) {
+        .hero-meta-list {
+          grid-template-columns: repeat(2, minmax(0, auto));
+          gap: 44px;
+        }
+      }
+
+      .meta-label {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--heading);
+      }
+
+      .meta-value {
+        margin-top: 6px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--body);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .meta-time {
+        margin-left: 8px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* Lakeside illustration below hero content */
+      .hero-scene {
+        margin-top: 56px;
+        border-radius: 28px;
+        border: 1px solid var(--border);
+        background-color: var(--bg-soft);
+        padding: 18px 18px 0;
+        overflow: hidden;
+      }
+
+      @media (min-width: 768px) {
+        .hero-scene {
+          margin-top: 72px;
+          padding: 24px 24px 0;
+        }
+      }
+
+      .hero-scene svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* Section headings & two-column editorial split */
+      .section-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      @media (min-width: 900px) {
+        .section-grid {
+          grid-template-columns: 4fr 8fr;
+          gap: 56px;
+          align-items: start;
+        }
+      }
+
+      .section-title {
+        font-family: var(--font-rounded);
+        font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        color: var(--heading);
+      }
+
+      .section-title-accent {
+        display: inline-block;
+        padding-bottom: 6px;
+        border-bottom: 4px solid var(--accent);
+      }
+
+      .section-subtext {
+        margin-top: 14px;
+        font-size: 1rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      /* Intro section */
+      .intro-prose {
+        max-width: 62ch;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        font-size: 1.0625rem;
+        line-height: 1.85;
+        color: var(--body);
+      }
+
+      /* Details section */
+      .details-section {
+        background-color: var(--bg-tint);
+      }
+
+      .details-header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      @media (min-width: 640px) {
+        .details-header {
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+      }
+
+      .details-grid {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      @media (min-width: 640px) {
+        .details-grid {
+          gap: 20px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .details-grid {
+          gap: 28px;
+        }
+      }
+
+      .detail-card {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background-color: var(--bg-soft);
+        padding: 16px 10px;
+      }
+
+      @media (min-width: 640px) {
+        .detail-card {
+          padding: 28px 24px;
+        }
+      }
+
+      .detail-label {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--heading);
+        padding-bottom: 3px;
+        border-bottom: 3px solid var(--accent);
+      }
+
+      .detail-value {
+        margin-top: 14px;
+        font-family: var(--font-rounded);
+        font-size: 0.9375rem;
+        font-weight: 800;
+        line-height: 1.45;
+        color: var(--heading);
+        word-break: keep-all;
+      }
+
+      @media (min-width: 640px) {
+        .detail-value {
+          margin-top: 18px;
+          font-size: 1.25rem;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .detail-value {
+          font-size: 1.375rem;
+        }
+      }
+
+      .detail-value.tabular {
+        font-variant-numeric: tabular-nums;
+      }
+
+      .detail-caption {
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+        font-size: 1rem;
+        color: var(--muted);
+        word-break: keep-all;
+      }
+
+      @media (min-width: 640px) {
+        .detail-caption {
+          margin-top: 24px;
+          padding-top: 16px;
+        }
+      }
+
+      /* Location, Checklist, Apply & Contact sections */
+      .checklist-section {
+        background-color: var(--bg-tint);
+      }
+
+      .checklist-card,
+      .location-card,
+      .apply-card,
+      .contact-card {
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background-color: var(--bg-soft);
+        padding: 28px 24px;
+      }
+
+      @media (min-width: 640px) {
+        .checklist-card,
+        .location-card,
+        .apply-card,
+        .contact-card {
+          padding: 36px 36px;
+        }
+      }
+
+      .checklist-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .checklist-status {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--heading);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .checklist-reset {
+        background: transparent;
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--muted);
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .checklist-reset:hover {
+        background-color: var(--bg-tint);
+        color: var(--heading);
+      }
+
+      .checklist-list {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .checklist-item + .checklist-item {
+        border-top: 1px solid var(--border);
+      }
+
+      .checklist-btn {
+        width: 100%;
+        min-height: 56px;
+        padding: 14px 6px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-align: left;
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: var(--body);
+        transition: color 150ms ease;
+      }
+
+      .checklist-btn:hover {
+        color: var(--heading);
+      }
+
+      .check-box {
+        width: 26px;
+        height: 26px;
+        border-radius: 9px;
+        border: 2px solid var(--heading);
+        background-color: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: background-color 150ms ease, border-color 150ms ease;
+      }
+
+      .check-box svg {
+        opacity: 0;
+        transform: scale(0.85);
+        transition: opacity 150ms ease, transform 150ms ease;
+      }
+
+      .checklist-btn[aria-checked="true"] .check-box {
+        background-color: var(--button);
+        border-color: var(--heading);
+      }
+
+      .checklist-btn[aria-checked="true"] .check-box svg {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .checklist-btn[aria-checked="true"] .check-text {
+        color: var(--muted);
+        text-decoration: line-through;
+        text-decoration-color: var(--accent);
+        text-decoration-thickness: 2px;
+      }
+
+      .info-pair-grid,
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      @media (min-width: 560px) {
+        .info-pair-grid,
+        .contact-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 32px;
+        }
+      }
+
+      .info-pair-label,
+      .contact-label {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .info-pair-value,
+      .contact-value {
+        margin-top: 6px;
+        font-family: var(--font-rounded);
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--heading);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .location-actions,
+      .apply-actions {
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .contact-section {
+        border-bottom: none;
+      }
+
+      .contact-note {
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        font-size: 1rem;
+        color: var(--body);
+      }
+
+      /* Footer */
+      .site-footer {
+        border-top: 1px solid var(--border);
+        background-color: var(--bg-tint);
+        padding: 36px 0;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 1rem;
+        color: var(--muted);
+      }
+
+      @media (min-width: 640px) {
+        .footer-inner {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      .footer-notice {
+        font-weight: 700;
+        color: var(--heading);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand-link" data-nav-target="hero">온담컴퍼니</a>
+
+        <nav aria-label="행사 안내 메뉴" class="desktop-nav">
+          <a href="#hero" class="nav-link is-active" data-nav-target="hero" aria-current="location">첫 화면</a>
+          <a href="#intro" class="nav-link" data-nav-target="intro">행사 소개</a>
+          <a href="#details" class="nav-link" data-nav-target="details">핵심 정보</a>
+          <a href="#location" class="nav-link" data-nav-target="location">오시는 곳</a>
+          <a href="#checklist" class="nav-link" data-nav-target="checklist">준비물</a>
+          <a href="#contact" class="nav-link" data-nav-target="contact">문의</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="btn btn-header" data-scroll-target="details">
+            일정 및 장소 확인
+          </button>
+
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-navigation"
+            aria-label="메뉴 열기"
+          >
+            <svg id="icon-menu-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+              <line x1="4" y1="7" x2="20" y2="7" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="17" x2="20" y2="17" />
+            </svg>
+            <svg id="icon-menu-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" hidden>
+              <line x1="6" y1="6" x2="18" y2="18" />
+              <line x1="18" y1="6" x2="6" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-navigation" aria-label="모바일 행사 안내 메뉴" class="mobile-nav" hidden>
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link is-active" data-nav-target="hero" aria-current="location">첫 화면</a></li>
+          <li><a href="#intro" class="mobile-nav-link" data-nav-target="intro">행사 소개</a></li>
+          <li><a href="#details" class="mobile-nav-link" data-nav-target="details">핵심 정보</a></li>
+          <li><a href="#location" class="mobile-nav-link" data-nav-target="location">오시는 곳</a></li>
+          <li><a href="#checklist" class="mobile-nav-link" data-nav-target="checklist">준비물</a></li>
+          <li><a href="#contact" class="mobile-nav-link" data-nav-target="contact">문의</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 1. 첫 화면 -->
+      <section id="hero" aria-labelledby="hero-title" class="hero-section">
+        <div class="container">
+          <div class="hero-top">
+            <p class="hero-kicker">온담컴퍼니 경영지원팀 주최</p>
+
+            <h1 id="hero-title" class="hero-title">
+              2027 봄 워크숍
+              <span class="hero-title-sub">‘함께 걷는 하루’</span>
+            </h1>
+
+            <p class="hero-intro">
+              온담컴퍼니 전 직원이 광교호수공원을 걸으며 함께 소통하는 봄 워크숍입니다.
+            </p>
+          </div>
+
+          <div class="hero-meta-bar">
+            <dl class="hero-meta-list">
+              <div>
+                <dt class="meta-label">일시</dt>
+                <dd class="meta-value">
+                  2027년 4월 16일(금)<span class="meta-time">09:30~16:00</span>
+                </dd>
+              </div>
+              <div>
+                <dt class="meta-label">장소</dt>
+                <dd class="meta-value">광교호수공원</dd>
+              </div>
+            </dl>
+
+            <div class="hero-actions">
+              <a
+                href="https://script.google.com/macros/s/AKfycby-1RA8ZTxQsj-rA0OiuTY2X26IJGAg4RvBKrJeRiU2sn2WSh0iL-PNGIbmsPF2Wvfe/exec"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+              >
+                <span>참석 신청하기</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <button type="button" class="btn" data-scroll-target="details">
+                <span>핵심 정보 한눈에 보기</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <polyline points="19 12 12 19 5 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 첫 화면 아래: 단순한 도형으로 그린 호수, 산책로, 나무 -->
+          <div class="hero-scene" aria-hidden="true">
+            <svg viewBox="0 0 1040 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- 봄 햇살 & 구름 -->
+              <circle cx="140" cy="72" r="34" fill="#FFCF33" />
+              <circle cx="140" cy="72" r="46" fill="#FFCF33" fill-opacity="0.24" />
+              <rect x="240" y="54" width="88" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.75" />
+              <rect x="266" y="42" width="52" height="24" rx="12" fill="#FFFFFF" fill-opacity="0.85" />
+              <rect x="760" y="48" width="98" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.75" />
+              <rect x="784" y="36" width="56" height="24" rx="12" fill="#FFFFFF" fill-opacity="0.85" />
+
+              <!-- 먼 잔디 언덕 -->
+              <path d="M0 196 Q240 144 520 176 T1040 164 L1040 280 L0 280 Z" fill="#D5ECDD" />
+
+              <!-- 호수 (단순한 물결 도형) -->
+              <path d="M0 198 Q260 180 560 198 T1040 194 L1040 280 L0 280 Z" fill="#B5E1D2" />
+              <path d="M180 218 H264" stroke="#EAF6EE" stroke-width="4" stroke-linecap="round" />
+              <path d="M470 212 H542" stroke="#EAF6EE" stroke-width="4" stroke-linecap="round" />
+              <path d="M770 220 H845" stroke="#EAF6EE" stroke-width="4" stroke-linecap="round" />
+
+              <!-- 호수가 산책로 -->
+              <path d="M0 242 Q320 216 640 238 T1040 228 L1040 280 L0 280 Z" fill="#F9EBC3" />
+              <path d="M0 258 Q320 234 640 256 T1040 246" stroke="#FF8FB0" stroke-width="3" stroke-dasharray="10 12" stroke-linecap="round" />
+
+              <!-- 나무 1 (왼쪽 큰 초록 나무) -->
+              <rect x="74" y="168" width="12" height="58" rx="6" fill="#0F4C3F" />
+              <circle cx="80" cy="144" r="36" fill="#2A7B64" />
+              <circle cx="60" cy="154" r="22" fill="#469A80" />
+              <circle cx="102" cy="154" r="22" fill="#469A80" />
+
+              <!-- 나무 2 (왼쪽 분홍 벚꽃 나무) -->
+              <rect x="150" y="182" width="10" height="44" rx="5" fill="#0F4C3F" />
+              <circle cx="155" cy="164" r="26" fill="#FF8FB0" />
+              <circle cx="141" cy="170" r="16" fill="#FFB2C9" />
+              <circle cx="170" cy="170" r="16" fill="#FFB2C9" />
+
+              <!-- 나무 3 (가운데 작은 나무) -->
+              <rect x="596" y="176" width="10" height="40" rx="5" fill="#0F4C3F" />
+              <circle cx="601" cy="158" r="24" fill="#358C72" />
+              <circle cx="585" cy="166" r="15" fill="#5AB094" />
+
+              <!-- 나무 4 (오른쪽 큰 초록 나무) -->
+              <rect x="884" y="156" width="14" height="66" rx="7" fill="#0F4C3F" />
+              <circle cx="891" cy="130" r="40" fill="#0F4C3F" />
+              <circle cx="868" cy="142" r="24" fill="#2A7B64" />
+              <circle cx="914" cy="142" r="24" fill="#2A7B64" />
+
+              <!-- 나무 5 (오른쪽 분홍 봄나무) -->
+              <rect x="962" y="176" width="10" height="44" rx="5" fill="#0F4C3F" />
+              <circle cx="967" cy="156" r="28" fill="#FF8FB0" />
+              <circle cx="950" cy="164" r="16" fill="#FFB2C9" />
+              <circle cx="984" cy="164" r="16" fill="#FFB2C9" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. 행사 소개 -->
+      <section id="intro" aria-labelledby="intro-heading" class="section">
+        <div class="container section-grid">
+          <div>
+            <h2 id="intro-heading" class="section-title">
+              <span class="section-title-accent">01. 행사 소개</span>
+            </h2>
+            <p class="section-subtext">주최 · 온담컴퍼니 경영지원팀</p>
+          </div>
+
+          <div class="intro-prose">
+            <p>
+              온담컴퍼니 경영지원팀이 주최하는 2027 봄 워크숍 ‘함께 걷는 하루’는 전 직원이 함께 걸으며 소통하는 사내 봄 행사입니다.
+            </p>
+            <p>
+              2027년 4월 16일(금) 광교호수공원에서 진행되며, 온담컴퍼니 전 직원이 함께 참여할 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 핵심 정보 -->
+      <section id="details" aria-labelledby="details-heading" class="section details-section">
+        <div class="container">
+          <div class="details-header">
+            <div>
+              <h2 id="details-heading" class="section-title">
+                <span class="section-title-accent">02. 핵심 정보</span>
+              </h2>
+              <p class="section-subtext">일시, 장소, 대상을 한눈에 확인하세요.</p>
+            </div>
+
+            <button type="button" id="copy-summary-btn" class="btn">
+              <svg id="icon-copy" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
+              <svg id="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span id="copy-summary-label">핵심 정보 복사</span>
+            </button>
+          </div>
+
+          <dl class="details-grid">
+            <div class="detail-card">
+              <div>
+                <dt class="detail-label">일시</dt>
+                <dd class="detail-value tabular">2027년 4월 16일(금) 09:30~16:00</dd>
+              </div>
+              <p class="detail-caption">행사 진행 일시</p>
+            </div>
+
+            <div class="detail-card">
+              <div>
+                <dt class="detail-label">장소</dt>
+                <dd class="detail-value">광교호수공원</dd>
+              </div>
+              <p class="detail-caption">행사 진행 장소</p>
+            </div>
+
+            <div class="detail-card">
+              <div>
+                <dt class="detail-label">대상</dt>
+                <dd class="detail-value">온담컴퍼니 전 직원</dd>
+              </div>
+              <p class="detail-caption">참여 대상</p>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- 4. 오시는 곳 -->
+      <section id="location" aria-labelledby="location-heading" class="section">
+        <div class="container section-grid">
+          <div>
+            <h2 id="location-heading" class="section-title">
+              <span class="section-title-accent">03. 오시는 곳</span>
+            </h2>
+            <p class="section-subtext">행사 장소 안내입니다.</p>
+          </div>
+
+          <div class="location-card">
+            <dl class="info-pair-grid">
+              <div>
+                <dt class="info-pair-label">장소</dt>
+                <dd class="info-pair-value">광교호수공원</dd>
+              </div>
+              <div>
+                <dt class="info-pair-label">우천 시 안내</dt>
+                <dd class="info-pair-value">미정</dd>
+              </div>
+            </dl>
+
+            <div class="location-actions">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=광교호수공원"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+              >
+                <span>지도에서 보기</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 챙겨 오세요 -->
+      <section id="checklist" aria-labelledby="checklist-heading" class="section checklist-section">
+        <div class="container section-grid">
+          <div>
+            <h2 id="checklist-heading" class="section-title">
+              <span class="section-title-accent">04. 챙겨 오세요</span>
+            </h2>
+            <p class="section-subtext">각 항목을 눌러 준비 여부를 표시할 수 있습니다.</p>
+          </div>
+
+          <div class="checklist-card">
+            <div class="checklist-header">
+              <span id="checklist-status" class="checklist-status">0 / 4 확인됨</span>
+              <button type="button" id="checklist-reset-btn" class="checklist-reset">모두 해제</button>
+            </div>
+
+            <ul class="checklist-list">
+              <li class="checklist-item">
+                <button type="button" class="checklist-btn" role="checkbox" aria-checked="false" data-check-item="shoes">
+                  <span class="check-box" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14261F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
+                  <span class="check-text">편한 운동화</span>
+                </button>
+              </li>
+              <li class="checklist-item">
+                <button type="button" class="checklist-btn" role="checkbox" aria-checked="false" data-check-item="bottle">
+                  <span class="check-box" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14261F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
+                  <span class="check-text">개인 물병</span>
+                </button>
+              </li>
+              <li class="checklist-item">
+                <button type="button" class="checklist-btn" role="checkbox" aria-checked="false" data-check-item="jacket">
+                  <span class="check-box" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14261F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
+                  <span class="check-text">가벼운 겉옷</span>
+                </button>
+              </li>
+              <li class="checklist-item">
+                <button type="button" class="checklist-btn" role="checkbox" aria-checked="false" data-check-item="idcard">
+                  <span class="check-box" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14261F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
+                  <span class="check-text">사원증</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 신청 -->
+      <section id="apply" aria-labelledby="apply-heading" class="section">
+        <div class="container section-grid">
+          <div>
+            <h2 id="apply-heading" class="section-title">
+              <span class="section-title-accent">05. 신청</span>
+            </h2>
+            <p class="section-subtext">참석 신청 안내입니다.</p>
+          </div>
+
+          <div class="apply-card">
+            <dl class="info-pair-grid">
+              <div>
+                <dt class="info-pair-label">신청 마감</dt>
+                <dd class="info-pair-value">4월 2일(금)</dd>
+              </div>
+              <div>
+                <dt class="info-pair-label">대상</dt>
+                <dd class="info-pair-value">온담컴퍼니 전 직원</dd>
+              </div>
+            </dl>
+
+            <div class="apply-actions">
+              <a
+                href="https://script.google.com/macros/s/AKfycby-1RA8ZTxQsj-rA0OiuTY2X26IJGAg4RvBKrJeRiU2sn2WSh0iL-PNGIbmsPF2Wvfe/exec"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+              >
+                <span>참석 신청하기</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. 문의 -->
+      <section id="contact" aria-labelledby="contact-heading" class="section contact-section">
+        <div class="container section-grid">
+          <div>
+            <h2 id="contact-heading" class="section-title">
+              <span class="section-title-accent">06. 문의</span>
+            </h2>
+            <p class="section-subtext">행사 관련 담당 부서 안내입니다.</p>
+          </div>
+
+          <div class="contact-card">
+            <dl class="contact-grid">
+              <div>
+                <dt class="contact-label">담당 부서</dt>
+                <dd class="contact-value">온담컴퍼니 경영지원팀</dd>
+              </div>
+              <div>
+                <dt class="contact-label">연락처</dt>
+                <dd class="contact-value">미정</dd>
+              </div>
+            </dl>
+            <p class="contact-note">
+              담당 부서는 경영지원팀이며, 세부 연락처는 현재 미정입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>온담컴퍼니 경영지원팀 · 2027 봄 워크숍 '함께 걷는 하루'</p>
+        <p class="footer-notice">교육용 가상 행사입니다</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var sectionIds = ['hero', 'intro', 'details', 'location', 'checklist', 'contact'];
+        var sections = sectionIds
+          .map(function (id) {
+            return document.getElementById(id);
+          })
+          .filter(Boolean);
+
+        var navLinks = Array.prototype.slice.call(
+          document.querySelectorAll('[data-nav-target]')
+        );
+        var scrollButtons = Array.prototype.slice.call(
+          document.querySelectorAll('[data-scroll-target]')
+        );
+        var mobileToggle = document.getElementById('mobile-menu-toggle');
+        var mobileNav = document.getElementById('mobile-navigation');
+        var iconMenuOpen = document.getElementById('icon-menu-open');
+        var iconMenuClose = document.getElementById('icon-menu-close');
+
+        function setMobileMenu(open) {
+          if (!mobileToggle || !mobileNav) return;
+          mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          mobileToggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+          if (open) {
+            mobileNav.removeAttribute('hidden');
+          } else {
+            mobileNav.setAttribute('hidden', '');
+          }
+          if (iconMenuOpen && iconMenuClose) {
+            if (open) {
+              iconMenuOpen.setAttribute('hidden', '');
+              iconMenuClose.removeAttribute('hidden');
+            } else {
+              iconMenuOpen.removeAttribute('hidden');
+              iconMenuClose.setAttribute('hidden', '');
+            }
+          }
+        }
+
+        function setActiveSection(activeId) {
+          navLinks.forEach(function (link) {
+            var targetId = link.getAttribute('data-nav-target');
+            if (!targetId || link.classList.contains('brand-link')) return;
+            if (targetId === activeId) {
+              link.classList.add('is-active');
+              link.setAttribute('aria-current', 'location');
+            } else {
+              link.classList.remove('is-active');
+              link.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        function navigateTo(sectionId) {
+          var target = document.getElementById(sectionId);
+          if (!target) return;
+          setMobileMenu(false);
+
+          var reduceMotion =
+            window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+          target.scrollIntoView({
+            behavior: reduceMotion ? 'auto' : 'smooth',
+            block: 'start',
+          });
+          setActiveSection(sectionId);
+        }
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            var targetId = link.getAttribute('data-nav-target');
+            if (targetId) {
+              navigateTo(targetId);
+            }
+          });
+        });
+
+        scrollButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var targetId = btn.getAttribute('data-scroll-target');
+            if (targetId) {
+              navigateTo(targetId);
+            }
+          });
+        });
+
+        if (mobileToggle) {
+          mobileToggle.addEventListener('click', function () {
+            var isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+            setMobileMenu(!isOpen);
+          });
+        }
+
+        function updateActiveOnScroll() {
+          if (sections.length === 0) return;
+          var scrollPosition = window.scrollY + 130;
+          var atBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 24;
+
+          if (atBottom) {
+            setActiveSection('contact');
+            return;
+          }
+
+          for (var i = sections.length - 1; i >= 0; i--) {
+            if (sections[i].offsetTop <= scrollPosition) {
+              setActiveSection(sections[i].id);
+              return;
+            }
+          }
+          setActiveSection('hero');
+        }
+
+        updateActiveOnScroll();
+        window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
+
+        // Copy summary handler (works both on HTTPS and local file://)
+        var copyBtn = document.getElementById('copy-summary-btn');
+        var copyLabel = document.getElementById('copy-summary-label');
+        var iconCopy = document.getElementById('icon-copy');
+        var iconCheck = document.getElementById('icon-check');
+        var copyTimer = null;
+
+        var summaryText = [
+          "2027 봄 워크숍 '함께 걷는 하루'",
+          '일시: 2027년 4월 16일(금) 09:30~16:00',
+          '장소: 광교호수공원',
+          '대상: 온담컴퍼니 전 직원',
+          '주최: 온담컴퍼니 경영지원팀',
+        ].join('\n');
+
+        function showCopiedState() {
+          if (!copyLabel) return;
+          copyLabel.textContent = '핵심 정보 복사됨';
+          if (iconCopy && iconCheck) {
+            iconCopy.setAttribute('hidden', '');
+            iconCheck.removeAttribute('hidden');
+          }
+          if (copyTimer) {
+            window.clearTimeout(copyTimer);
+          }
+          copyTimer = window.setTimeout(function () {
+            copyLabel.textContent = '핵심 정보 복사';
+            if (iconCopy && iconCheck) {
+              iconCopy.removeAttribute('hidden');
+              iconCheck.setAttribute('hidden', '');
+            }
+          }, 2000);
+        }
+
+        function fallbackCopy(text) {
+          var textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            var ok = document.execCommand('copy');
+            if (ok) showCopiedState();
+          } catch (err) {
+            // Clipboard unavailable
+          }
+          document.body.removeChild(textarea);
+        }
+
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function () {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard
+                .writeText(summaryText)
+                .then(showCopiedState)
+                .catch(function () {
+                  fallbackCopy(summaryText);
+                });
+            } else {
+              fallbackCopy(summaryText);
+            }
+          });
+        }
+
+        // Interactive checklist handler
+        var checkButtons = Array.prototype.slice.call(
+          document.querySelectorAll('[data-check-item]')
+        );
+        var checklistStatus = document.getElementById('checklist-status');
+        var checklistResetBtn = document.getElementById('checklist-reset-btn');
+        var storageKey = 'ondam-workshop-2027-checklist';
+        var checkedState = {};
+
+        try {
+          var saved = window.localStorage.getItem(storageKey);
+          if (saved) {
+            checkedState = JSON.parse(saved) || {};
+          }
+        } catch (err) {
+          checkedState = {};
+        }
+
+        function renderChecklist() {
+          var checkedCount = 0;
+          checkButtons.forEach(function (btn) {
+            var key = btn.getAttribute('data-check-item');
+            var isChecked = Boolean(key && checkedState[key]);
+            btn.setAttribute('aria-checked', isChecked ? 'true' : 'false');
+            if (isChecked) {
+              checkedCount += 1;
+            }
+          });
+          if (checklistStatus) {
+            checklistStatus.textContent = checkedCount + ' / ' + checkButtons.length + ' 확인됨';
+          }
+        }
+
+        function saveChecklist() {
+          try {
+            window.localStorage.setItem(storageKey, JSON.stringify(checkedState));
+          } catch (err) {
+            // Storage unavailable
+          }
+        }
+
+        checkButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var key = btn.getAttribute('data-check-item');
+            if (!key) return;
+            checkedState[key] = !checkedState[key];
+            renderChecklist();
+            saveChecklist();
+          });
+        });
+
+        if (checklistResetBtn) {
+          checklistResetBtn.addEventListener('click', function () {
+            checkedState = {};
+            renderChecklist();
+            saveChecklist();
+          });
+        }
+
+        renderChecklist();
+      })();
+    </script>
+  </body>
+</html>

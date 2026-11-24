@@ -1,0 +1,6 @@
+{
+  "name": "2027 봄 워크숍 '함께 걷는 하루'",
+  "description": "온담컴퍼니 전 직원이 1분 안에 행사 핵심 정보를 확인할 수 있는 2027 봄 워크숍 안내 페이지입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
